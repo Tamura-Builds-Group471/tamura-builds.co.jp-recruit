@@ -22,6 +22,16 @@
 - **カスタムフィールド:** Advanced Custom Fields（ACF）
 - **ローカル環境:** Docker Compose
 
+## ステージング環境
+
+| 項目 | 内容 |
+|------|------|
+| URL | http://113.44.119.18:8092 |
+| Basic認証 | コーポレートサイトと共通 |
+| コンテナ名 | wp-tamura-builds-recruit-wordpress-1 |
+| SSHアクセス | `ssh LOOLY-Staging` |
+| デプロイ方法 | SSH経由で `docker cp` でコンテナ内にファイルを配置 |
+
 ## ローカル環境
 
 ### URL
