@@ -1,0 +1,113 @@
+.bl_recruit_info_card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/2;
+    &_img {
+        box-sizing: border-box;
+        overflow: hidden;
+        img {
+            aspect-ratio: 3/2;
+            transition: all 0.3s ease-out;
+        }
+    }
+    &_contents {
+        position: absolute;
+        padding: 15px 15px 15px 30px;
+        width: 100%;
+        bottom: 20px;
+        background-color: $col_white;
+        border-left: 15px solid;
+        @media screen and (max-width: 772px){
+            bottom: 10px;
+            padding: 10px 15px;
+        }
+        &_en {
+            display: block;
+            @include fz(12px,14,16px);
+            font-weight: bold;
+            margin-bottom: 10px;
+            @media screen and (max-width: 772px){
+                margin-bottom: 5px;
+            }
+        }
+        &_title {
+            @include fz(18px,24,32px);
+            color: $col_black;
+            font-weight: bold;
+            margin-right: 30px;
+            @include mq(sp){
+                display: block;
+            }
+        }
+        &_txt {
+            @include fz(14px,16,18px);
+            color: $col_black;
+            font-weight: bold;
+            margin-right: 40px;
+            @include mq(sp){
+                display: block;
+                line-height: 1.3em;
+                margin-top: 5px;
+            }
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            @media screen and (max-width: 772px){
+                right: 20px;
+            }
+        }
+    }
+    &:hover {
+        opacity: 1;
+        .bl_recruit_info_card_img {
+            img {
+                transform: scale(1.2);
+            }
+        }
+        .bl_recruit_info_card_contents {
+            svg {
+                right: 15px;
+                @media screen and (max-width: 772px){
+                    right: 5px;
+                }
+            }
+        }
+    }
+    &.blue {
+        .bl_recruit_info_card_contents {
+            border-color: $col_theme_blue;
+            &_en {
+                color: $col_theme_blue;
+            }
+        }
+    }
+    &.green {
+        .bl_recruit_info_card_contents {
+            border-color: $col_theme_green;
+            &_en {
+                color: $col_theme_green;
+            }
+        }
+    }
+    &.red {
+        .bl_recruit_info_card_contents {
+            border-color: $col_red;
+            &_en {
+                color: $col_red;
+            }
+        }
+    }
+    &.orange {
+        .bl_recruit_info_card_contents {
+            border-color: $col_orange;
+            &_en {
+                color: $col_orange;
+            }
+        }
+    }
+}

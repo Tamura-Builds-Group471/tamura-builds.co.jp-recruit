@@ -1,0 +1,164 @@
+// form {
+//     display: grid;
+//     gap: 2px;
+//     @include mq(lg) {
+//         grid-template-columns: 220px 1fr;
+//     }
+// }
+.form {
+    display: grid;
+    gap: 2px;
+    @include mq(lg) {
+        grid-template-columns: 220px 1fr;
+    }
+    &_ttl {
+        padding: 15px 7px 15px 15px;
+        display: flex;
+        grid-template-columns: 1fr auto;
+        background-color: #8d8d8d;
+        color: $col_white;
+        align-items: center;
+        height: 100%;
+        font-size: 16px;
+        line-height: 1em;
+        font-weight: 600;
+        .must {
+            color: $col_theme_blue;
+            font-size: 12px;
+            font-weight: 400;
+            margin-left: auto;
+        }
+    }
+    &_box {
+        position: relative;
+        padding: 2px;
+        background-color: $col_gray_middle;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: justify;
+        margin-bottom: 0;
+        height: 100%;
+        @include mq(sp) {
+            padding: 15px 10px;
+        }
+        &.radio {
+            padding: 15px 10px 10px 28px;
+            @include mq(sp) {
+                padding: 15px 10px 10px 15px;
+                min-height: 84px;
+            }
+            &.confirm_txt {
+                @include mq(sp) {
+                    min-height: unset;
+                }
+            }
+        }
+        input[type="text"], textarea {
+            border: unset;
+            background-color: $col_white;
+            padding: 16px 10px;
+            max-width: 100%;
+            width: 100%;
+        }
+        input[type="text"]::placeholder {
+            color: $col_gray;
+        }
+        input[type="text"].post,
+        input[type="text"].age {
+            width: 300px;
+        }
+        select {
+            border: unset;
+            background-color: #fff;
+            padding: 16px 10px;
+            appearance: auto;
+            max-width: 100%;
+            width: 200px;
+        }
+        .error {
+            color: $col_red!important;
+        }
+        &.confirm_txt {
+            padding: 15px;
+        }
+    }
+    &_btn {
+        text-align: center;
+        margin-top: 50px;
+        input {
+            width: max-content;
+            padding: 15.5px 20px;
+            background-color: $col_theme_blue;
+            color: $col_white;
+            min-width: 250px;
+            border: unset;
+            font-size: 16px;
+            transition: .3s;
+            margin-bottom: 15px;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+    &_footer {
+        margin: 10px auto;
+        @include mq(lg) {
+            margin: 30px auto;
+            width: 430px;
+        }
+        &_txt {
+            padding: 0 15px;
+            @include mq(lg) {
+                padding: 0 30px;
+            }
+        }
+        &_btn {
+            height: 50px;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        span.mwform-checkbox-field.horizontal-item {
+            display: block;
+            width: 100%;
+            height: 100%;
+            label {
+                width: 100%;
+                height: 100%;
+                .mwform-checkbox-field-text {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $col_gray;
+                    color: $col_white;
+                    cursor: pointer;
+                }
+                input[type=checkbox] {
+                    display: none;
+                    &:checked~.mwform-checkbox-field-text {
+                        background-color: $col_theme_green;
+                    }
+                }
+            }
+        }
+        &_btn.submit {
+            border-radius: none;
+            width: 100%;
+            margin-top: 25px;
+        }
+        input[name=submitConfirm]:disabled {
+            border: 3px solid $col_gray;
+            color: $col_gray;
+        }
+        input[name=submitConfirm] {
+            border: 3px solid $col_theme_blue;
+            color: $col_theme_blue;
+            transition: 0.3s;
+        }
+    }
+}

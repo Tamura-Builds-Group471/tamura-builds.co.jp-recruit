@@ -1,0 +1,41 @@
+.bl_heading_2_en {
+    margin-bottom: 50px;
+    span {
+        display: block;
+        color: $col_black;
+        @include fz(30px,40,50px);
+        line-height: 1em;
+        font-weight: bold;
+        letter-spacing: 0;
+        margin-bottom: 8px;
+    }
+    h2 {
+        position: relative;
+        padding-left: 40px;
+        color: $col_theme_blue;
+        @include fz(14px,18,20px);
+        font-weight: bold;
+        letter-spacing: 0;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: block;
+            background: $col_theme_blue;
+            width: 30px;
+            height: 2px;
+        }
+    }
+    &.white {
+        span {
+            color: $col_white;
+        }
+        h2 {
+            color: $col_white;
+            &::before {
+                background: $col_white;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.flow_list {
+    position: relative;
+    &_ttl {
+        padding-left: 75px;
+        color: $col_theme_blue;
+        margin-bottom: 10px;
+        @include fz(20px,22,22px);
+        line-height: 1.5em;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    &_num {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $col_theme_blue;
+        width: 60px;
+        height: 60px;
+        color: $col_white;
+        line-height: 1em;
+        .flow {
+            font-size: 10px;
+            margin-bottom: 5px;
+        }
+        .num {
+            font-size: 28px;
+        }
+    }
+}
+
+.flow_body {
+    @media screen and (min-width: 773px){
+        padding-left: 75px;
+    }
+    &_h4 {
+        font-size: 17px;
+        border-left: 3px solid $col_theme_blue;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+    @media screen and (max-width: 540px){
+        .bl_btn {
+            width: 100%;
+        }
+    }
+}

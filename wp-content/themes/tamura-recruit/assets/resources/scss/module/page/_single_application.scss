@@ -1,0 +1,26 @@
+table.summary_table {
+    max-width: 700px;
+    margin: 0 auto;
+    .summary_table_list {
+        grid-template-columns: 192px 1fr;
+        gap: 30px;
+        padding: 20px 0;
+        border-bottom: 1px solid $col_gray;
+        .summary_table_list_th {
+            color: $col_theme_blue;
+            font-size: 16px;
+        }
+        .summary_table_list_td {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 772px){
+    table.summary_table .summary_table_list {
+        grid-template-columns: 85px 1fr;
+        gap: 15px;
+    }
+}

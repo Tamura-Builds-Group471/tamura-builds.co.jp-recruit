@@ -1,0 +1,14 @@
+.single_content_pagenation {
+    border-top: 1px solid $col_black;
+    border-bottom: 1px solid $col_black;
+    padding: 30px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    &_btn {
+        text-align: center;
+        @include fz(14px,16,16px);
+        svg {
+            width: 8px;
+            margin-top: -3px;
+        }
+    }
+}

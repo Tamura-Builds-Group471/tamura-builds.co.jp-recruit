@@ -1,0 +1,48 @@
+.bl_article_list_line {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4em auto 1em;
+    gap: 50px;
+    @include fz(14px,16,16px);
+    line-height: 1.3em;
+    color: $col_black;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid $col_gray;
+    @include mq(sp){
+        gap: 25px;
+    }
+    @media screen and (max-width: 772px){
+        gap: 3px;
+        grid-template-columns: unset;
+    }
+    &_title {
+        @media screen and (max-width: 772px){
+            padding-right: 33px;
+        }
+    }
+    &_date {
+        color: $col_theme_blue;
+    }
+    svg {
+        position: absolute;
+        height: 14px;
+        width: 14px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        @media screen and (max-width: 772px){
+            right: 10px;
+        }
+    }
+    &:hover{
+        background-color: $col_gray_light;
+        svg {
+            right: 10px;
+            @media screen and (max-width: 772px){
+                right: 0;
+            }
+        }
+    }
+}

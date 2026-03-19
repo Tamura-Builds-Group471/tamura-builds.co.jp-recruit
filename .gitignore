@@ -1,0 +1,19 @@
+.env
+
+# Uploads
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# プラグイン（カスタムのみ管理）
+wp-content/plugins/*
+
+# mu-plugins
+wp-content/mu-plugins/*
+!wp-content/mu-plugins/production-media-fallback.php
+
+# 公式テーマ除外、カスタムテーマのみ管理
+wp-content/themes/*
+!wp-content/themes/tamura-recruit/
+
+.DS_Store

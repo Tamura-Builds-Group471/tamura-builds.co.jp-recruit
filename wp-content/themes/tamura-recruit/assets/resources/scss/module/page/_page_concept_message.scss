@@ -1,0 +1,43 @@
+h3.concept_ttl {
+    font-size: 34px;
+    span {
+        font-size: 20px;
+    }
+}
+.signature {
+    max-width: 570px;
+    margin: 50px auto 0;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: right;
+    p {
+        color: $col_black;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    img {
+        width: 180px;
+    }
+}
+
+#movie {
+    .matterport-showcase {
+        text-align: center;
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            min-height: 455px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    #movie {
+        .matterport-showcase {
+            iframe {
+                min-height: 360px;
+            }
+        }
+    }
+}

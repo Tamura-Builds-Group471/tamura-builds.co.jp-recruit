@@ -1,0 +1,133 @@
+// TODO for文,fill,bor,ダブル,flex
+/*
+* variable.scss
+*/
+
+/* -- font-size -- */
+$i: 10;
+$font_sizes: ();
+@while $i <= 80 {
+  $font_size: (
+    $i: $i + px,
+  );
+  $font_sizes: map-merge($font_sizes, $font_size);
+  $i: $i + 1;
+}
+//第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+// @function get_vw($size, $viewport:1366){
+//   $rate: 100 / $viewport;
+//   @return $rate * $size * 1vw;
+// }
+// @mixin fz_vw($font_size:10){
+//   font-size: $font_size * 1px;
+//   font-size: get_vw($font_size);
+//   line-height: 1em;
+// }
+// @include fz_vw(72);  //出力時
+
+/* -- font-size(vw) -- */
+@mixin fz($min_pixel, $pixel, $max_pixel) {
+  $pixel: $pixel / 1366 * 100;
+  font-size:clamp(#{$min_pixel}, #{$pixel}vw, #{$max_pixel});
+  line-height: 1.1em;
+}
+// @include fz(35px,72,90px);  //出力時
+
+/* -- font-family -- */
+$main_font: "Helvetica Neue", "Noto Sans JP", sans-serif !default;
+$sub_font: "Helvetica Neue", "Noto Sans JP", sans-serif !default;
+// <head>内に<link href="https://fonts.googleapis.com/〜" rel="stylesheet">（使用するフォントライブラリ）追加
+
+/* -- color -- */
+$col_theme_blue: #003384 !default;
+$col_theme_green : #227035 !default;
+$col_red: #CE462A !default;
+$col_blue : #5574AF !default;
+$col_green : #70AA60 !default;
+$col_orange : #DD9C42 !default;
+$col_black: #242424 !default;
+$col_white: #fff !default;
+$col_gray_light: #F9F9FA !default;
+$col_gray_middle: #EDEDEE !default;
+$col_gray: #D1D3D6 !default;
+$col_yellow: #DDC72C !default;
+$col_blue_light: #2996C1 !default;
+
+$site_colors: (
+"theme_blue": $col_theme_blue,
+"theme_green": $col_theme_green,
+"red": $col_red,
+"blue": $col_blue,
+"green": $col_green,
+"orenge": $col_black,
+"black": $col_black,
+"white": $col_white,
+"gray_light": $col_gray_light,
+"gray_middle": $col_gray_middle,
+"gray": $col_gray,
+"yellow": $col_yellow,
+"blue_light": $col_blue_light,
+) !default;
+
+.theme_blue {
+  color: $col_theme_blue,
+}
+.theme_green {
+  color: $col_theme_green,
+}
+
+/* -- size --*/
+$page_width: 1366px !default;
+$page_max_width: unset !default;
+$page_padding: 30px !default;
+$page_padding_sp: 5% !default;
+
+$column2_main_width: 790px !default;
+$column2_side_width: 350px !default;
+
+/* -- grid_size -- */
+$grid-sizes: (
+  1: 100px,
+  2: 150px,
+  3: 200px,
+  4: 250px,
+  5: 300px,
+) !default;
+
+/* -- font-weigh -- */
+$font-weigh: (
+  "light": 200,
+  "semibold": 500,
+  "bold": 600,
+) !default;
+
+/* -- layer(z-index) -- */
+$layer: (
+  modal: 100,
+  header: 20,
+  tooltip: 10,
+  default: 1,
+) !default;
+
+/* -- media_query -- */
+$breakpoints: (
+  "sm": "screen and (min-width: 400px)",
+  "sp": "screen and (max-width: 999px)",
+  "md": "screen and (min-width: 1000px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* -- media modifier -- */
+@mixin mediaModifire($className) {
+  @include mq(md) {
+    .#{$className}_pc {
+      @content;
+    }
+  }
+}

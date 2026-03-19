@@ -1,0 +1,43 @@
+#entry {
+    margin: 0 auto;
+    .line_box {
+        max-width: 720px;
+        background-color: $col_gray_middle;
+        padding: 50px;
+        margin: 0 auto;
+    }
+    .text {
+        &.tx_center {
+            @media screen and (max-width: 772px){
+                text-align: left;
+            }
+        }
+    }
+}
+
+.entry_form {
+    &_ttl {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.bl_contact_progress_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 20px;
+    @include mq(lg) {
+        width: 580px;
+    }
+    &_item {
+        padding: 7px 0px;
+        text-align: center;
+        background-color: $col_gray_middle;
+        color: #707070;
+        &.current {
+            background-color: $col_theme_blue;
+            color: $col_white;
+        }
+    }
+}

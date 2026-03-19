@@ -1,0 +1,293 @@
+/*------------------------------------
+ FirstView
+------------------------------------*/
+
+$firstView_height : 100vh;
+
+/* スライド画像拡大しながらフェード */
+@keyframes zoomUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.20); /* 拡大率 */
+    }
+}
+
+.bl_topHeader {
+    margin-top: -70px;
+    &_slide {
+        overflow: hidden;
+        width: 100vw;
+        &_item {
+            position: relative;
+            &_img {
+                max-height: $firstView_height;
+                height: 100%;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                @media screen and (max-width: 772px){
+                    aspect-ratio: 3 /4;
+                    max-height: 698px;
+                }
+            }
+            &_text {
+                position: absolute;
+                bottom: 100px;
+                left: 100px;
+                color: $col_white;
+                font-weight: bold;
+                @include fz(38px,72,90px);
+                line-height: 1em;
+                @include mq(sp){
+                    bottom: 50px;
+                    left: 50px;
+                }
+                @media screen and (max-width: 772px){
+                    bottom: 110px;
+                    left: 20px;
+                    padding-right: 15px;
+                }
+                &.text02 {
+                    @include fz(52px,200,220px);
+                }
+                .large_ja {
+                    display: block;
+                    @include fz(24px,40,60px);
+                    line-height: 1em;
+                    margin-bottom: 10px;
+                    @include mq(xl){
+                        margin-bottom: 30px;
+                    }
+                }
+                .small_ja {
+                    display: block;
+                    @include fz(14px,22,28px);
+                    line-height: 1.8em;
+                }
+            }
+        &.add-animation {
+            img {
+                animation: zoomUp 10s linear 0s normal both;
+            }
+        }
+        }
+    }
+}
+
+
+/*------------------------------------
+ Vision
+------------------------------------*/
+
+.sec_topVision {
+    &_wrap {
+        p {
+            color: $col_black;
+            font-weight: bold;
+        }
+        &_txt_en {
+            @include fz(35px,85,100px);
+            margin-bottom: 75px;
+            /*アニメーション*/
+            .bgextend{
+                display: inline-block;
+                animation-name:bgextendAnimeBase;
+                animation-duration:1s;
+                animation-fill-mode:forwards;
+                position: relative;
+                overflow: hidden;/*　はみ出た色要素を隠す　*/
+                opacity:0;
+            }
+            .bgappear{
+                animation-name:bgextendAnimeSecond;
+                animation-duration:1s;
+                animation-delay: 0.6s;
+                animation-fill-mode:forwards;
+                opacity: 0;
+            }
+            .bgLRextend {
+                &:before {
+                    animation-name:bgLRextendAnime;
+                    animation-duration:1s;
+                    animation-fill-mode:forwards;
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $col_black;/*伸びる背景色の設定*/
+                }
+            }
+            .bgappearTrigger, .bgLRextendTrigger {
+                opacity: 0;
+            }
+        }
+        &_txt_small {
+            @include fz(16px,25,25px);
+            line-height: 2.2em;
+            letter-spacing: 0;
+            margin-bottom: 50px;
+        }
+        &_txt_large {
+            @include fz(30px,59,70px);
+            span {
+                display: block;
+                @include fz(25px,50,65px);
+                line-height: 1.8em;
+            }
+        }
+    }
+}
+
+@keyframes bgextendAnimeBase {
+    from {
+        opacity:0;
+    }
+  
+    to {
+        opacity:1;  
+    }
+}
+
+@keyframes bgextendAnimeSecond{
+	0% {
+	    opacity: 0;
+	}
+	100% {
+	    opacity: 1;
+    }   
+}
+
+@keyframes bgLRextendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+
+/*------------------------------------
+ Links
+------------------------------------*/
+
+// .sec_Links {
+//     &_wrap {
+//         grid-template-columns: repeat(2, minmax(auto, max-content));
+//         @media screen and (max-width: 772px){
+//             grid-template-columns: repeat(1, 1fr);
+//         }
+//     }
+// }
+
+
+/*------------------------------------
+ News
+------------------------------------*/
+
+.sec_topNews {
+    &_wrap {
+        grid-template-columns: auto 1fr;
+        @include mq(sp){
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        &_btn {
+            padding-left: unset;
+            margin-bottom: unset;
+            @include mq(sp){
+                display: grid;
+                grid-template-columns: repeat( 3 , 1fr);
+                gap: 10px;
+            }
+            @media screen and (max-width: 772px){
+                grid-template-columns: repeat( 2 , 1fr);
+                gap: 10px;
+            }
+            &_item {
+                margin-bottom: 10px;
+                text-align: center;
+                @include mq(sp){
+                    margin-bottom: unset;
+                }
+                &_link {
+                    display: block;
+                    padding: 8px 12px;
+                    border: 1px solid $col_theme_blue;
+                    color: $col_theme_blue;
+                    @include fz(11px,14,16px);
+                    line-height: 1.1em;
+                    font-weight: bold;
+                    letter-spacing: 0;
+                    text-decoration: none;
+                    &.active, &:hover {
+                        background-color: $col_theme_blue;
+                        color: $col_white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &_article {
+            .tab-pane {
+                p {
+                    color: $col_black;
+                    @include fz(14px,16,18px);
+                    line-height: 1.1em;
+                }
+            }
+        }
+    } 
+}
+
+
+/*------------------------------------
+ Events
+------------------------------------*/
+
+.sec_topEvent {
+    background-color: $col_theme_blue;
+    .mynavi_link {
+        max-width: 130px;
+        @include mq(md){
+            max-width: 150px;
+        }
+        @include mq(xl){
+            max-width: 13vw;
+        }
+        a {
+            display: block;
+        }
+    }
+    &_wrap {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-bottom: 1px solid $col_gray;
+        @include mq(sp){
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+    &_banner {
+        grid-template-columns: 1fr 1fr 1fr;
+        @include mq(sp){
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        &_link {
+            img {
+                box-shadow: 0 0 6px rgba(0, 0, 0, .16);
+            }
+        }
+    }
+}

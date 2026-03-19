@@ -1,0 +1,60 @@
+.bl_link_box_01 {
+    position: relative;
+    border: 1px solid #D1D3D6;
+    &_img {
+        box-sizing: border-box;
+        overflow: hidden;
+        img{
+            aspect-ratio: 3/2;
+            transition: all 0.3s ease-out;
+        }
+    }
+    span.bl_link_box_01_text {
+        padding: 20px;
+        display: block;
+        &_ttl {
+            display: block;
+            @include fz(16px,24,18px);
+            line-height: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        &_explain {
+            font-size: 14px;
+            font-weight: 600;
+            color: $col_theme_blue;
+        }
+    }
+    &_tag {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 8px;
+        font-size: 14px;
+        line-height: 1em;
+        color: #fff;
+        z-index: 10;
+        &.blue {
+            background-color: $col_theme_blue;
+        }
+        &.green {
+            background-color: $col_theme_green;
+        }
+        &.red {
+            background-color: $col_red;
+        }
+        &.orage {
+            background-color: $col_orange;
+        }
+        &.gray {
+            background-color: $col_gray;
+        }
+    }
+    &:hover {
+        .bl_link_box_01_img {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

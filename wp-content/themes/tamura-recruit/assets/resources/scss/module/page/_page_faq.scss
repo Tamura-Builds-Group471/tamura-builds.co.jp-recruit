@@ -1,0 +1,13 @@
+.faq_link_btn {
+    justify-items: center;
+    grid-row-gap: 20px;
+    .bl_btn_inpage {
+        max-width: 100%;
+    }
+}
+
+.faq_wrap {
+    h3 {
+        @include fz(24px,28,28px);
+    }
+}

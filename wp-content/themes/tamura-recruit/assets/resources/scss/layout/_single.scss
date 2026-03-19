@@ -1,0 +1,234 @@
+// .single {
+//   &_header {
+//     @include mq(md) {
+//       grid-template-columns: auto 1fr;
+//     }
+//     &_img {
+//       aspect-ratio: 4/3;
+//       margin-top: 30px;
+//       @include mq(md) {
+//         margin-top: 0px;
+//         height: 170px;
+//       }
+//     }
+//     &_info {
+//       width: 100%;
+//       justify-content: space-between;
+//       @include mq(md) {
+//         justify-content: unset;
+//       }
+//     }
+//     &_content {
+//       justify-items: flex-start;
+//       &_ttl {
+//         height: 100%;
+//       }
+//       &_tagList {
+//         align-self: flex-end;
+//       }
+//     }
+//   }
+
+//   &_content {
+//     @include mq(md) {
+//       border-top: 1px solid $col_black;
+//       border-bottom: 1px solid $col_black;
+//       grid-template-columns: $column2_main_width $column2_side_width;
+//     }
+
+//     &_body {
+//       $block_padding_pc: 50px;
+//       border-top: 1px solid $col_black;
+//       padding: 0 $page_padding_sp;
+//       margin: 30px calc($page_padding_sp * -1);
+//       @include mq(md) {
+//         padding: 45px $block_padding_pc;
+//         margin: 0px;
+//         border-top: unset;
+//         border-bottom: 1px solid $col_black;
+//         border-right: 1px solid $col_black;
+//       }
+
+//       & > * {
+//         margin-top: 20px;
+//         margin-bottom: 20px;
+//       }
+//       h2,
+//       h3,
+//       h4 {
+//         @extend .fw_b;
+//       }
+//       h2 {
+//         @extend .fs_20;
+//         @extend .fs_24_pc;
+//         padding: 16px 0;
+//         background-color: $col_black;
+//         color: $col_white;
+//         margin-top: 30px;
+//         margin-right: calc($page_padding_sp * -1 - 2px);
+//         margin-left: calc($page_padding_sp * -1 - 2px);
+//         padding-right: calc($page_padding_sp + 2px);
+//         padding-left: calc($page_padding_sp + 2px);
+//         @include mq(md) {
+//           margin-top: 50px;
+//           margin-right: -$block_padding_pc;
+//           margin-left: -$block_padding_pc;
+//           padding-right: $block_padding_pc;
+//           padding-left: $block_padding_pc;
+//         }
+//       }
+//       h3 {
+//         @extend .fs_18;
+//         @extend .fs_22_pc;
+//         margin-top: 30px;
+//         border-bottom: 1px solid $col_gray2;
+//         padding-bottom: 10px;
+//         @include mq(md) {
+//           padding-bottom: 16px;
+//           margin-right: -$block_padding_pc;
+//           padding-right: $block_padding_pc;
+//         }
+//       }
+//       h4 {
+//         @extend .fs_16;
+//         @extend .fs_18_pc;
+//         margin-top: 15px;
+//         @include mq(md) {
+//           margin-top: 30px;
+//         }
+//       }
+//       p {
+//         @extend .fs_14;
+//         @extend .fs_16_pc;
+//         margin-top: 12px;
+//         line-height: 1.5em;
+//         @include mq(md) {
+//           margin-top: 20px;
+//           line-height: 1.75em;
+//         }
+//       }
+//       a {
+//         @extend .fw_b;
+//         border-bottom: 1px solid $col_black;
+//       }
+//       figcaption {
+//         @extend .fs_12;
+//         color: #a0a0a0;
+//       }
+
+//       // 目次
+//       #ez-toc-container {
+//         border: none;
+//         margin: 0px;
+//         border-top: 1px solid $col_black;
+//         border-radius: unset;
+//         padding-top: 30px;
+//         width: calc(100% + $page_padding_sp * 2);
+//         margin-right: calc($page_padding_sp * -1);
+//         margin-left: calc($page_padding_sp * -1);
+//         padding-right: $page_padding_sp;
+//         padding-left: $page_padding_sp;
+//         @include mq(md) {
+//           padding-top: 50px;
+//           width: calc(100% + $block_padding_pc * 2);
+//           margin-right: -$block_padding_pc;
+//           margin-left: -$block_padding_pc;
+//           padding-right: $block_padding_pc;
+//           padding-left: $block_padding_pc;
+//         }
+//         .ez-toc-title {
+//           @extend .fw_b;
+//           @extend .fs_24;
+//           @extend .fs_40_pc;
+//           display: grid;
+//           @include mq(md) {
+//             grid-template-columns: auto 1fr;
+//             align-items: flex-end;
+//             gap: 30px;
+//             vertical-align: bottom;
+//             &::after {
+//               margin-bottom: 10px;
+//             }
+//           }
+//           &::after {
+//             @extend .fs_12;
+//             @extend .fw_l;
+//             content: "見出し";
+//             display: inline-block;
+//             position: static;
+//             color: $col_gray3;
+//           }
+//         }
+//         .ez-toc-list {
+//           @extend .fs_14;
+//           @extend .fs_16_pc;
+//           display: grid;
+//           counter-reset: count;
+//           margin-top: 25px;
+//           gap: 0.7em;
+//           @include mq(md) {
+//             gap: 1em;
+//           }
+//           a {
+//             border-bottom: none;
+//           }
+//           .ez-toc-page-1 {
+//             @extend .fw_b;
+//             counter-increment: count;
+//             display: grid;
+//             grid-template-columns: auto 1fr;
+
+//             &::before {
+//               content: "0" counter(count) ".";
+//               color: $col_theme_blue2;
+//               position: static;
+//               display: inline-block;
+//               margin-right: 20px;
+//             }
+//           }
+//           .ez-toc-list-level-3 {
+//             display: none;
+//           }
+//         }
+//       }
+//     }
+//     &_side {
+//       height: 100%;
+//       display: none;
+//       @include mq(md) {
+//         display: block;
+//       }
+//       & > * {
+//         padding-top: 50px;
+//         padding-bottom: 50px;
+//         padding-left: 50px;
+//       }
+//       &_newArticles {
+//         &_inner {
+//           display: grid;
+//           grid-template-columns: 80px 1fr;
+//           gap: 15px;
+//           img {
+//             height: 100%;
+//             width: 100%;
+//             aspect-ratio: 1.56;
+//           }
+//         }
+//       }
+//     }
+//     &_pagenation {
+//       margin: 0 calc($page_padding_sp * -1);
+//       padding: 30px $page_padding_sp;
+//       border-top: 1px solid $col_black;
+//       border-bottom: 1px solid $col_black;
+//       @include mq(md) {
+//         margin: 0;
+//         padding: 50px 65px;
+//         order: unset;
+//         border-top: none;
+//         border-bottom: none;
+//         border-right: 1px solid $col_black;
+//       }
+//     }
+//   }
+// }

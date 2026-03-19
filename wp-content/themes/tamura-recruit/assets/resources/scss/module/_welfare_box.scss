@@ -1,0 +1,53 @@
+.welfare_box {
+    padding: 50px;
+    min-height: 540px;
+    background-color: $col_gray_light;
+    &_ttl {
+        @include fz(20px,24,24px);
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &_img {
+        margin-bottom: 30px;
+    }
+    &_txt {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: justify;
+    }
+    &.blue {
+        border: 1px solid $col_theme_blue;
+        .welfare_box_ttl {
+            color: $col_theme_blue;
+        }
+    }
+    &.green {
+        border: 1px solid $col_theme_green;
+        .welfare_box_ttl {
+            color: $col_theme_green;
+        }
+    }
+    &.red {
+        border: 1px solid $col_red;
+        .welfare_box_ttl {
+            color: $col_red;
+        }
+    }
+    &.orenge {
+        border: 1px solid $col_orange;
+        .welfare_box_ttl {
+            color: $col_orange;
+        }
+    }
+}
+@include mq(sp) {
+    .welfare_box {
+        padding: 40px 25px;
+    }
+}
+@media screen and (max-width: 772px){
+    .welfare_box {
+        min-height: unset;
+    }
+}

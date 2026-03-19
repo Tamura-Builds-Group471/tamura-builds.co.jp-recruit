@@ -1,0 +1,39 @@
+.img_ttl_txt_box {
+    position: relative;
+    &_img {
+        aspect-ratio: 3/2;
+        margin-bottom: 20px;
+    }
+    &_ttl {
+        @include fz(20px,24,24px);
+        margin-bottom: 15px;
+        line-height: 1.4em;
+    }
+    &_txt {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    &_tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $col_white;
+        font-size: 14px;
+        line-height: 1em;
+        padding: 10px;
+        &.blue {
+            background-color: $col_theme_blue;
+        }
+        &.green {
+            background-color: $col_theme_green;
+        }
+        &.red {
+            background-color: $col_red;
+        }
+        &.orange {
+            background-color: $col_orange;
+        }
+    }
+}

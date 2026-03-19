@@ -1,0 +1,98 @@
+.single_post{
+    max-width: 700px;
+    margin: 0 auto;
+    &_header {
+        border-bottom: 1px solid $col_black;
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        @media screen and (max-width: 772px){
+            display: block;
+        }
+        &_info {
+            &_detail {
+                margin-bottom: 15px;
+                .date {
+                    color: $col_theme_blue;
+                    @include fz(14px,16,18px);
+                    margin-right: 10px;
+                }
+                .cat {
+                    font-size: 13px;
+                    padding: 3px 7px;
+                    color: $col_white;
+                    &.blue {
+                        background-color: $col_theme_blue;
+                    }
+                    &.green {
+                        background-color: $col_theme_green;
+                    }
+                    &.red {
+                        background-color: $col_red;
+                    }
+                    &.gray {
+                        background-color: $col_gray;
+                    }
+                }
+            }
+            &_ttl {
+                @include fz(20px,24,24px);
+                line-height: 1.4em;
+            }
+        }
+        &_thumbnail {
+            img {
+                width: 230px;
+                aspect-ratio: 3/2;
+                border: 1px solid $col_gray;
+                @media screen and (max-width: 772px){
+                    margin-top: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &_body {
+        h2 {
+            @include fz(24px,32,32px);
+            line-height: 1.4em;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+        h3 {
+            @include fz(20px,34,24px);
+            color: $col_theme_blue;
+            line-height: 1.4em;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        h4 {
+            @include fz(18px,18,18px);
+            line-height: 1.4em;
+            margin-bottom: 20px;
+        }
+        h5 {
+            font-size: 16px;
+            line-height: 1.4em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        a {
+            color: $col_theme_blue;
+            text-decoration: underline;
+            display: block;
+        }
+        figure {
+            max-width: 100%;
+        }
+    }
+}

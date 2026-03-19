@@ -1,0 +1,12 @@
+#adult_intern_intro{
+    .orange {
+        color: $col_orange;
+    }
+}
+.license_cntents_box {
+    padding: 50px 25px;
+    background-color: #EDEDEE;
+    h3 {
+        @include fz(20px,22,22px);
+    }
+}

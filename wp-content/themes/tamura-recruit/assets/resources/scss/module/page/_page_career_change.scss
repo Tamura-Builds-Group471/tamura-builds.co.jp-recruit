@@ -1,0 +1,24 @@
+.in_pagelink_box {
+    max-width: 720px;
+    background-color: $col_gray_middle;
+    padding: 45px 30px;
+    p {
+        line-height: 32px;
+        font-size: 16px;
+    }
+    .bl_btn_inpage {
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 540px){
+        .bl_btn_inpage {
+            max-width: 100%;
+        }
+    }
+}
+
+.entry_cntents {
+    &_box {
+        padding: 50px 25px;
+        background-color: $col_gray_middle;
+    }
+}

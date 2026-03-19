@@ -1,0 +1,79 @@
+.career_plan {
+    max-width: 600px;
+    margin: 0 auto;
+    &_wrap {
+        padding: 100px 0;
+        border-bottom: 1px solid;
+        &:first-child {
+            padding: 0 0 100px;
+        }
+        &_person {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            &_img {
+                aspect-ratio: 3/2;
+            }
+            &_detail {
+                &_name {
+                    margin-bottom: 11px;
+                    span.jp {
+                        color: $col_black;
+                        @include fz(18px,20,20px);
+                        margin-right: 10px;
+                    }
+                    span.en {
+                        color: $col_theme_blue;
+                        font-size: 14px;
+                        white-space: nowrap;
+                    }
+                }
+                &_start {
+                    color: $col_black;
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+                &_company {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+                &_department {
+                    color: $col_theme_blue;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    margin-bottom: 5px;
+                    display: block;
+                }
+                &_branch {
+                    font-size: 16px;
+                    font-weight: 400;;
+                }
+            }
+        }
+        &_midashi {
+            color: $col_theme_blue;
+            @include fz(20px,24,26px);
+            line-height: 1.5em;
+        }
+        &_txt {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 772px){
+    .career_plan {
+        &_wrap {
+            padding: 50px 0;
+            &:first-child {
+                padding: 0 0 50px;
+            }
+            &_person {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

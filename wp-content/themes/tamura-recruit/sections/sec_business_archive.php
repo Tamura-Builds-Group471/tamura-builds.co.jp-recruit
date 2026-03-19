@@ -1,0 +1,29 @@
+<?php $parent_page_id ="165" ; ?>
+<?php $post_objects = get_field('lower_page_lists', $parent_page_id); if( $post_objects ): ?>
+
+<section id="business_links" class="pt_50 pb_50">
+    <div class="sec_inner">
+        <?php get_template_part('blocks/bl_heading_2_bk', null, [
+            'ttl' => '事業一覧',
+            'color' => 'blue',
+            'class' => 'mb_50',
+        ]) ?>
+        <div class="column_3 d_grid gap_25">
+            <?php foreach((array)$post_objects as $object):?>
+                <?php
+                    $post_link = get_the_permalink($object->ID);
+                    $post_ttl = get_the_title($object->ID);
+                    $post_excerpt = get_the_excerpt($object->ID);
+                ?>
+                <?php get_template_part('blocks/bl_text_link_card', null, [
+                    'link' => $post_link,
+                    'ttl' => $post_ttl,
+                    'explain' => $post_excerpt,
+                    'color' => 'blue',
+                ]) ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<?php endif; ?>

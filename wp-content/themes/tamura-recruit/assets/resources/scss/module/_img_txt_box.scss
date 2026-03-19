@@ -1,0 +1,12 @@
+.img_txt_box {
+    &_img {
+        aspect-ratio: 3/2;
+        margin-bottom: 20px;
+    }
+    &_txt {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        text-align: justify;
+    }
+}

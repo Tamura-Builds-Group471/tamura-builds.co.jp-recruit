@@ -1,0 +1,11 @@
+.sec_Links {
+    &_wrap {
+        // grid-template-columns: repeat(2, minmax(auto, max-content));
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        place-items: center;
+        @media screen and (max-width: 772px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

@@ -1,0 +1,153 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  font-family: $main_font;
+  width: 100%;
+  color: $col_black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+  display: block;
+  font-size: inherit;
+  margin: 0;
+  font-weight: bold;
+}
+
+h2 {
+  @include fz(24px,36,42px);
+  line-height: 1.5em;
+}
+
+h3 {
+  @include fz(20px,24,28px);
+  line-height: 1.3em;
+}
+
+p {
+  color: $col_black;
+  @include fz(14px,16,18px);
+  line-height: 1.3em;
+  font-weight: bold;
+}
+
+p.text {
+  color: $col_black;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  text-align: justify;
+  &.small {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: unset;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+dl {
+  dt {
+    font-weight: 400;
+  }
+  dd {
+    text-align: justify;
+    margin-bottom: 0;
+  }
+}
+
+img {
+  font-family: "object-fit: cover; object-position: center;";
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+input,
+button,
+select,
+textarea {
+  color: inherit;
+  background-color: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+input[type="date"] {
+  min-height: 34px;
+}
+label {
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  color: $col_black;
+  border-radius: 5px;
+  background-color: $col_white;
+  appearance: none;
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+svg {
+  transition: 0.3s;
+}
+header {
+  text-align: center;
+}
+
+.sec_inner {
+  width: 100%;
+  margin: 0 auto;
+  @include mq(xl){
+    max-width: 1140px;
+  }
+  @media screen and (min-width:1000px) and ( max-width:1199px) {
+    max-width: 960px;
+  }
+  @include mq(sp){
+    max-width: 720px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &_full {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
+}

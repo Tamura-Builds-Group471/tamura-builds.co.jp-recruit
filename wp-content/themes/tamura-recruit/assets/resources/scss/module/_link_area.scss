@@ -1,0 +1,28 @@
+.col1_link_area {
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: $col_gray_middle;
+    h3 {
+        @include fz(20px,24,24px);
+        margin-bottom: 10px;
+    }
+    a {
+        font-size: 16px;
+        font-weight: 400;
+        color: $col_theme_blue;
+        text-decoration: underline;
+        &.external {
+            position: relative;
+            padding-right: 25px;
+            &:after {
+                content: url('../../../assets/public/img/icon/external_link_icon_blue.svg');
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.bl_heading_3 {
+    background-color: $col_theme_blue;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw) 30px;
+    padding: 13px 0;
+    h3 {
+        color: $col_white;
+        @include fz(18px,24,32px);
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,19 @@
+.bl_heading_2_bk {
+    text-align: center;
+    padding: 10px;
+    @include fz(24px,32,32px);
+    line-height: 1.4em;
+    color: $col_white;
+    &.blue {
+        background-color: $col_theme_blue;
+    }
+    &.green {
+        background-color: $col_theme_green;
+    }
+    &.red {
+        background-color: $col_red;
+    }
+    &.orange {
+        background-color: $col_orange;
+    }
+}

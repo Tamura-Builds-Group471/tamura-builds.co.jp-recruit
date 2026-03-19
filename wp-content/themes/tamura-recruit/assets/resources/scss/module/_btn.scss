@@ -1,0 +1,56 @@
+.bl_btn {
+    display: flex;
+    justify-content: center;
+    // display: grid;
+    align-items: center;
+    // grid-template-columns: 1em auto 1em;
+    gap: 1em;
+    border: 1px solid $col_black;
+    width: max-content;
+    // padding: 15.5px;
+    padding: 15.5px 20px;
+    background-color: $col_white;
+    min-width: 250px;
+    &_txt {
+        grid-column: 2/3;
+        font-family: "Noto Sans JP", sans-serif;
+        @include fz(14px,16,16px);
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    svg {
+      height: 1em;
+    }
+    &.is_big {
+      width: 75%;
+      padding: 1em;
+      @include mq(md) {
+        width: 300px;
+      }
+    }
+    &.green {
+      border: 1px solid $col_theme_green;
+      background-color: $col_theme_green;
+      .bl_btn_txt {
+        color: $col_white;
+      }
+      svg {
+        path{
+          fill: $col_white;
+        }
+      }
+    }
+    &.blue {
+      border: 1px solid $col_theme_blue;
+      background-color: $col_theme_blue;
+      .bl_btn_txt {
+        color: $col_white;
+      }
+      svg {
+        path{
+          fill: $col_white;
+        }
+      }
+    }
+  }
+  

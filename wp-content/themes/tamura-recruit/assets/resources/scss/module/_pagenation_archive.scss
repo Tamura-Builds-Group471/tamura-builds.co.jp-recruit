@@ -1,0 +1,54 @@
+.pagination {
+    @extend .fw_b;
+    font-size: 14px;
+    color: $col_theme_blue;
+    width: 100%;
+    padding: 60px $page_padding_sp 0;
+    position: relative;
+    margin: 0 auto;
+  
+    @include mq(md) {
+      padding: 60px $page_padding 0;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  
+      .page-numbers {
+        display: grid;
+        place-items: center;
+        border: 1px solid $col_theme_blue;
+        aspect-ratio: 1/1;
+        letter-spacing: 0;
+        gap: 10px;
+        width: 35px;
+  
+        @include mq(md) {
+          width: 45px;
+        }
+  
+        &.current {
+          background-color: $col_theme_blue;
+          color: $col_white;
+        }
+  
+        a {
+          display: block;
+        }
+  
+        &.prev,
+        &.next {
+          fill: $col_theme_blue;
+          svg {
+            height: 1em;
+            width: 1em;
+          }
+        }
+      }
+    }
+  }
+  

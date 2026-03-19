@@ -1,0 +1,75 @@
+.bl_text_link_card {
+    position: relative;
+    padding: 15px 45px 15px 15px;
+    &_ttl {
+        display: block;
+        @include fz(18px,20,20px);
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    &_explain {
+        display: block;
+        color: $col_black;
+        font-size: 15px;
+        font-weight: bold;
+        word-break: break-all;
+    }
+    svg {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+    }
+    &:hover {
+        svg {
+            right: 10px;
+        }
+    }
+    &.blue {
+        border: 1px solid $col_theme_blue;
+        border-left: 15px solid $col_theme_blue;
+        .bl_text_link_card_ttl {
+            color: $col_theme_blue;
+        }
+        svg {
+            fill: $col_theme_blue;
+        }
+    }
+    &.green {
+        border: 1px solid $col_theme_green;
+        border-left: 15px solid $col_theme_green;
+        .bl_text_link_card_ttl {
+            color: $col_theme_green;
+        }
+        svg {
+            fill: $col_theme_green;
+        }
+    }
+    &.red {
+        border: 1px solid $col_red;
+        border-left: 15px solid $col_red;
+        .bl_text_link_card_ttl {
+            color: $col_red;
+        }
+        svg {
+            fill: $col_red;
+        }
+    }
+    &.orange {
+        border: 1px solid $col_orange;
+        border-left: 15px solid $col_orange;
+        .bl_text_link_card_ttl {
+            color: $col_orange;
+        }
+        svg {
+            fill: $col_orange;
+        }
+    }
+}
+@media screen and (max-width: 772px){
+    .bl_text_link_card {
+        padding: 15px 40px 15px 15px;
+    }
+}

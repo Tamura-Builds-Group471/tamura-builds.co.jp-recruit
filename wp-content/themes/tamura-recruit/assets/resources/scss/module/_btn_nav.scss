@@ -1,0 +1,57 @@
+.bl_btn_nav {
+    text-align: center;
+    a {
+        display: inline-block;
+        min-width: 150px;
+        background-color: $col_theme_blue;
+        border: 1px solid $col_theme_blue;
+        color: $col_white;
+        @include fz(12px,14,16px);
+        font-weight: bold;
+        cursor: pointer;
+        padding: 8px 20px;
+        &:hover {
+            background-color: $col_white;
+            border: 1px solid $col_theme_blue;
+            color: $col_theme_blue;
+            opacity: 1;
+        }
+    }
+    &.back_white {
+        a {
+            background-color: $col_white;
+            border: 1px solid $col_white;
+            color: $col_theme_blue;
+            &:hover {
+                background-color: $col_theme_blue;
+                border: 1px solid $col_white;
+                color: $col_white;
+            }
+        }
+    }
+    &.back_gray {
+        a {
+            background-color: $col_gray;
+            border: 1px solid $col_gray;
+            color: $col_black;
+            &:hover {
+                background-color: $col_gray;
+                border: 1px solid $col_gray;
+                color: $col_black;
+                opacity: .6;
+            }
+        }
+    }
+    &.text_white {
+        a {
+            background-color: unset;
+            border: 1px solid $col_white;
+            color: $col_white;
+            &:hover {
+                background-color: $col_white;
+                border: 1px solid $col_white;
+                color: $col_theme_green;
+            }
+        }
+    }
+}
