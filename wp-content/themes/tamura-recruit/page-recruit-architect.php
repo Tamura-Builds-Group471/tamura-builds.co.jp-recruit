@@ -16,7 +16,7 @@
 
         gtag('config', 'AW-18060028141');
     </script>
-    <title>山口の建築士・施工管理求人｜一級・二級建築士／現場監督の転職情報 by田村ビルズグループ</title>
+        <title>山口県で1級・2級建築士の求人を見る｜1級・2級建築士の転職情報 by田村ビルズグループ</title>
     <meta name="description" content="山口県で建築士・施工管理技士を募集。転勤なし・地域密着で無理のない働き方を実現。資格や経験を活かし、設計・現場に集中できる環境です。まずはカジュアル面談からご相談ください。">
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -225,7 +225,7 @@
 
             .spinput {
                 height: 44px;
-                font-size: 14px;
+                font-size: 16px;
             }
 
             .btn_submit {
@@ -236,6 +236,10 @@
             .inc-contact_table th {
                 font-size: 13px;
             }
+
+            #form{
+            padding: 15px 0px;
+        }
 
         }
     </style>
@@ -304,13 +308,31 @@
                         font-size: 0.875rem !important;
                     }
                 }
+
+                .recruit-video {
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    background: #000;
+                    overflow: hidden;
+                }
+
+                .recruit-video__item {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    background: #000;
+                }
             </style>
             <!-- Left Content -->
             <div class="lg:col-span-2 space-y-16">
                 <section class="fade-in">
-                    <h1 class="text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-3xl mb-4 fv-text">
-                        施工管理担当として、<br class="pc-only">新築物件や中古物件のリフォーム等における<br class="pc-only">施工管理業務を担当していただきます。
-                    </h1>
+                    <h2 class="text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-3xl mb-4 fv-text">
+                        1級・2級建築士の求人です！
+                    </h2>
+                    <h2 class="text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-3xl mb-4 fv-text">
+                        建築士として、住まいづくりに関わる間取り設計や<br class="pc-only">プラン作成を担当していただきます
+                    </h2>
                     <div class="flex items-center gap-4 text-slate-500 mb-8">
                         <div class="flex items-center gap-1">
                             <i data-lucide="map-pin" class="w-4 h-4"></i>
@@ -366,7 +388,35 @@
                         社員には『この会社に入ってよかった』、お客様には『この会社に頼んでよかった』『この会社から買ってよかった』、取引先様には『この会社と取引してよかった』、地域の方には『この会社があってよかった』と思ってもらえる様な、そんな会社にしていきたいと考えています。
                     </p>
                 </section>
-
+                <!-- 上場について -->
+                <section class="space-y-6 fade-in" style="animation-delay: 0.3s;">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-10 w-10 items-center justify-center bg-amber-50 text-amber-600">
+                            <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">おかげさまで田村ビルズグループは、2026年3月25日に東京証券取引所および福岡証券取引所へ同時上場いたしました</h2>
+                    </div>
+                    <div class="recruit-video">
+                        <video
+                            class="recruit-video__item"
+                            controls
+                            playsinline
+                            webkit-playsinline
+                            loop
+                            preload="metadata"
+                            poster="<?php echo get_template_directory_uri(); ?>/assets/public/img/lp/DSC00596.JPG">
+                            <source src="<?php echo get_template_directory_uri(); ?>/assets/public/img/lp/lv-1.mp4" type="video/mp4">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
+                    <p class="text-lg leading-relaxed text-slate-600 text-lg-s">
+                        株式会社田村ビルズグループは、東京証券取引所 TOKYO PRO Market および Fukuoka PRO Marketへ上場いたしました。これもひとえに、皆さまから賜りました温かいご支援の賜物と、心より感謝申し上げます。<br>
+                        <br>
+                        当社は明治12年の山口県大津郡三隅町での創業以来、140余年の歴史を皆さまと共に歩んでまいりました。この度の上場を機に、上場企業としての社会的責任を深く自覚し、これまで以上に皆さまへ安心と持続的な価値を提供できるよう邁進していく所存です。<br>
+                        <br>
+                        株式会社田村ビルズグループ 代表取締役 田村伊幸
+                    </p>
+                </section>
                 <!-- 福利厚生について -->
                 <section class="space-y-6 fade-in" style="animation-delay: 0.3s;">
                     <div class="flex items-center gap-3">
@@ -394,7 +444,13 @@
                         </table>
                     </div>
                 </section>
-
+                 <h2 class="font-black leading-tight text-slate-900" style="text-align:center;">
+                    \　ご興味がありましたら、お気軽にご相談ください！ /    
+                    </h2>
+                <a href="#form" style="width:100%;display: block;text-align: center; background: linear-gradient(90deg, #244d87, #2d6668);margin-top:2px;"
+                        class="w-full py-4 text-lg font-bold text-white transition hover:bg-blue-700">
+                        カジュアル面談に応募する
+                    </a>
 
             </div>
 
@@ -408,7 +464,7 @@
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2 text-sm text-slate-600">
                                 <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600"></i>
-                                一級建築士 / 二級建築士
+                                1級建築士 / 2級建築士
                             </li>
                         </ul>
                     </div>
@@ -436,14 +492,12 @@
                             <p class="text-slate-500">まずはカジュアルにお話ししましょう。<br>あなたのキャリアについてお聞かせください。</p>
                         </div>
 
-                        <div class="container" id="form">
-                            <div class="row-grid">
+                       <div class="row-grid" style="margin-top:5px;">
                                 <div class="cols span-12 contact_wrap">
-                                    <?php echo do_shortcode('[mwform_formkey key="4533"]'); ?>
+                                    <?php echo do_shortcode('[mwform_formkey key="12863"]'); ?>
                                 </div>
 
                             </div>
-                        </div>
                     </section>
                 </div>
             </div>
@@ -560,7 +614,7 @@
     },
     {
         label: '募集職種',
-        value: '【山口市】一級建築士または二級建築士／上場企業のグループ会社'
+        value: '【山口市】1級建築士または2級建築士／上場企業のグループ会社'
     },
     {
         label: '仕事内容',
@@ -568,7 +622,7 @@
     },
     {
         label: '応募資格',
-        value: '【必須】<br>普通自動車運転免許（AT限定不可）<br>設計業務の経験、一級建築士または二級建築士<br>宅地建物取引士<br>※学歴不問、50歳以下'
+        value: '【必須】<br>普通自動車運転免許（AT限定不可）<br>設計業務の経験、1級建築士または2級建築士<br>宅地建物取引士<br>※学歴不問、50歳以下'
     },
     {
         label: '勤務地',
@@ -580,7 +634,7 @@
     },
     {
         label: '給与',
-        value: '月給制<br>想定年収：500万円～800万円<br>残業手当：あり<br>※前職の給与を考慮します。'
+        value: '月給制<br>想定年収：450万円～650万円<br>残業手当：あり<br>※前職の給与を考慮します。'
     },
     {
         label: '諸手当・賞与',
@@ -588,7 +642,7 @@
     },
     {
         label: '休日・休暇',
-        value: '水・その他（週休二日制：毎週水曜、第2・3・4・5木曜日）<br>GW休暇、夏季休暇、年末年始休暇、特別休暇など（年間休日120日）<br>6ヶ月経過後の年次有給休暇日数：10日'
+        value: '水・その他（週休2日制：毎週水曜、第2・3・4・5木曜日）<br>GW休暇、夏季休暇、年末年始休暇、特別休暇など（年間休日120日）<br>6ヶ月経過後の年次有給休暇日数：10日'
     },
     {
         label: '福利厚生',

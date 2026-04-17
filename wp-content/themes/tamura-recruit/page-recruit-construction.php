@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <!-- 施工管理-採用 -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,8 @@
 
         gtag('config', 'AW-18060028141');
     </script>
-    <title>山口の建築士・施工管理求人｜一級・二級建築士／現場監督の転職情報 by田村ビルズグループ</title>
+    <title>山口県で1級・2級施工管理の求人を見る｜施工管理の転職情報 by田村ビルズグループ</title>
+
     <meta name="description" content="山口県で建築士・施工管理技士を募集。転勤なし・地域密着で無理のない働き方を実現。資格や経験を活かし、設計・現場に集中できる環境です。まずはカジュアル面談からご相談ください。">
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -86,9 +88,11 @@
             margin: 0 auto;
             background: #fff;
         }
-   #form{
+
+        #form {
             padding: 15px 15px;
         }
+
         /* =========================
    テーブル
 ========================= */
@@ -226,7 +230,7 @@
 
             .spinput {
                 height: 44px;
-                font-size: 14px;
+                font-size: 16px;
             }
 
             .btn_submit {
@@ -237,7 +241,9 @@
             .inc-contact_table th {
                 font-size: 13px;
             }
-
+ #form{
+            padding: 15px 0px;
+        }
         }
     </style>
 </head>
@@ -305,13 +311,32 @@
                         font-size: 0.875rem !important;
                     }
                 }
+
+                .recruit-video {
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    background: #000;
+                    overflow: hidden;
+                }
+
+                .recruit-video__item {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    background: #000;
+                }
             </style>
             <!-- Left Content -->
             <div class="lg:col-span-2 space-y-16">
                 <section class="fade-in">
-                    <h1 class="text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-3xl mb-4 fv-text">
-                        施工管理担当として、<br class="pc-only">新築物件や中古物件のリフォーム等における<br class="pc-only">施工管理業務を担当していただきます。
-                    </h1>
+                    
+                    <h2 class="text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-3xl mb-4 fv-text">
+                        1級・2級施工管理技士の求人です！
+                    </h2>
+                    <h2 class="text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-3xl mb-4 fv-text">
+                        買取再販リフォームや新築物件等の施工管理における<br class="pc-only">施工管理業務を担当していただきます。
+                    </h2>
                     <div class="flex items-center gap-4 text-slate-500 mb-8">
                         <div class="flex items-center gap-1">
                             <i data-lucide="map-pin" class="w-4 h-4"></i>
@@ -368,6 +393,36 @@
                     </p>
                 </section>
 
+                <!-- 上場について -->
+                <section class="space-y-6 fade-in" style="animation-delay: 0.3s;">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-10 w-10 items-center justify-center bg-amber-50 text-amber-600">
+                            <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">おかげさまで田村ビルズグループは、2026年3月25日に東京証券取引所および福岡証券取引所へ同時上場いたしました</h2>
+                    </div>
+                    <div class="recruit-video">
+                        <video
+                            class="recruit-video__item"
+                            controls
+                            playsinline
+                            webkit-playsinline
+                            loop
+                            preload="metadata"
+                            poster="<?php echo get_template_directory_uri(); ?>/assets/public/img/lp/DSC00596.JPG">
+                            <source src="<?php echo get_template_directory_uri(); ?>/assets/public/img/lp/lv-1.mp4" type="video/mp4">
+                            お使いのブラウザでは動画を再生できません。
+                        </video>
+                    </div>
+                    <p class="text-lg leading-relaxed text-slate-600 text-lg-s">
+                        株式会社田村ビルズグループは、東京証券取引所 TOKYO PRO Market および Fukuoka PRO Marketへ上場いたしました。これもひとえに、皆さまから賜りました温かいご支援の賜物と、心より感謝申し上げます。<br>
+                        <br>
+                        当社は明治12年の山口県大津郡三隅町での創業以来、140余年の歴史を皆さまと共に歩んでまいりました。この度の上場を機に、上場企業としての社会的責任を深く自覚し、これまで以上に皆さまへ安心と持続的な価値を提供できるよう邁進していく所存です。<br>
+                        <br>
+                        株式会社田村ビルズグループ 代表取締役 田村伊幸
+                    </p>
+                </section>
+
                 <!-- 福利厚生について -->
                 <section class="space-y-6 fade-in" style="animation-delay: 0.3s;">
                     <div class="flex items-center gap-3">
@@ -395,7 +450,13 @@
                         </table>
                     </div>
                 </section>
-
+                <h2 class="font-black leading-tight text-slate-900" style="text-align:center;">
+                    \　ご興味がありましたら、お気軽にご相談ください！ /    
+                    </h2>
+<a href="#form" style="width:100%;display: block;text-align: center; background: linear-gradient(90deg, #244d87, #2d6668);margin-top:2px;"
+                        class="w-full py-4 text-lg font-bold text-white transition hover:bg-blue-700">
+                        カジュアル面談に応募する
+                    </a>
 
             </div>
 
@@ -409,7 +470,7 @@
                         <ul class="space-y-3">
                             <li class="flex items-center gap-2 text-sm text-slate-600">
                                 <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600"></i>
-                                一級施工管理技士 / 二級施工管理技士
+                                1級施工管理技士 / 2級施工管理技士
                             </li>
                         </ul>
                     </div>
@@ -436,15 +497,12 @@
                             <h2 class="text-3xl font-black mb-4">カジュアル面談に<br>応募する</h2>
                             <p class="text-slate-500">まずはカジュアルにお話ししましょう。<br>あなたのキャリアについてお聞かせください。</p>
                         </div>
-
-                        <div class="container" id="form">
-                            <div class="row-grid">
+<div class="row-grid" style="margin-top:5px;">
                                 <div class="cols span-12 contact_wrap">
-                                    <?php echo do_shortcode('[mwform_formkey key="4530"]'); ?>
+                                    <?php echo do_shortcode('[mwform_formkey key="13140"]'); ?>
                                 </div>
 
                             </div>
-                        </div>
                     </section>
                 </div>
             </div>
@@ -554,48 +612,47 @@
         lucide.createIcons();
 
         // Job Details Data
-        const jobDetails = [
-    {
-        label: '企業名',
-        value: '株式会社 田村ビルズ'
-    },
-    {
-        label: '募集職種',
-        value: '【山口市】建築工事の施工管理／上場企業のグループ会社'
-    },
-    {
-        label: '仕事内容',
-        value: '住宅のリフォーム工事、新築工事の施工管理をおこなっていただきます。<br>円滑に工事が進むよう管理するお仕事です。<br><br>・工事現場の現地調査<br>・工事現場の施工業者との打ち合わせ<br>・建築資材の発注<br>・作業工程の調整<br><br>※業務内容の変更範囲：会社の定める業務の範囲'
-    },
-    {
-        label: '応募資格',
-        value: '【必須】普通自動車運転免許（AT限定不可）<br>【あれば尚可】1級建築施工管理技士、2級建築施工管理技士、宅地建物取引士<br>※学歴不問、経験不問、59歳以下（定年年齢が60歳のため）'
-    },
-    {
-        label: '勤務地',
-        value: '〒753-0851 山口県山口市黒川400-1<br>（大歳駅から車5分 / マイカー通勤可・駐車場あり）'
-    },
-    {
-        label: '勤務時間',
-        value: '08:00 〜 17:00（休憩80分）<br>※変形労働時間制（1年単位）、時間外労働あり（月平均20時間）'
-    },
-    {
-        label: '給与',
-        value: '月額 206,000円 〜 320,000円'
-    },
-    {
-        label: '諸手当・賞与',
-        value: '住宅手当（15,000円〜）<br>資格手当（上限40,000円）<br>通勤手当（上限6,000円）<br>残業手当<br>賞与：年2回（前年度実績：計3.00ヶ月分）<br>昇給：あり（前年度実績 1月あたり0.00％〜6.00％）'
-    },
-    {
-        label: '休日・休暇',
-        value: '日・祝日・その他（週休二日制：第2・3・4・5土曜日休）<br>GW休暇、夏季休暇、年末年始休暇、特別休暇など（年間休日120日）<br>6ヶ月経過後の年次有給休暇日数：10日'
-    },
-    {
-        label: '福利厚生',
-        value: '雇用・労災・健康・厚生・財形<br>携帯電話・PC貸与、営業車1人1台貸与（通勤利用可・ガソリン代会社負担）、慶弔見舞金、資格取得支援制度、顧問弁護士による社員相談制度、新築・リフォームの従業員割引、インフルエンザ予防接種、永年勤続表彰、社内表彰制度（月間MVP・年間個人／部門表彰）'
-    }
-];
+        const jobDetails = [{
+                label: '企業名',
+                value: '株式会社 田村ビルズ'
+            },
+            {
+                label: '募集職種',
+                value: '【山口市】建築工事の施工管理／上場企業のグループ会社'
+            },
+            {
+                label: '仕事内容',
+                value: '住宅のリフォーム工事、新築工事の施工管理をおこなっていただきます。<br>円滑に工事が進むよう管理するお仕事です。<br><br>・工事現場の現地調査<br>・工事現場の施工業者との打ち合わせ<br>・建築資材の発注<br>・作業工程の調整<br><br>※業務内容の変更範囲：会社の定める業務の範囲'
+            },
+            {
+                label: '応募資格',
+                value: '【必須】<br>普通自動車運転免許（AT限定不可）<br>1級建築士または2級建築士<br>宅地建物取引士<br>※学歴不問、経験不問、50歳以下'
+            },
+            {
+                label: '勤務地',
+                value: '〒753-0851 山口県山口市黒川400-1<br>（大歳駅から車5分 / マイカー通勤可・駐車場あり）'
+            },
+            {
+                label: '勤務時間',
+                value: '08:00 〜 17:00（休憩80分）<br>※変形労働時間制（1年単位）、時間外労働あり（月平均20時間）'
+            },
+            {
+                label: '給与',
+                value: '月給制<br>想定年収：450万円～650万円<br>残業手当：あり<br>※前職の給与を考慮します。'
+            },
+            {
+                label: '諸手当・賞与',
+                value: '住宅手当（15,000円〜）<br>資格手当（上限40,000円）<br>通勤手当（上限6,000円）<br>残業手当<br>賞与：年2回（前年度実績：計3.00ヶ月分）<br>昇給：あり（前年度実績 1月あたり0.00％〜6.00％）'
+            },
+            {
+                label: '休日・休暇',
+                value: '日・祝日・その他（週休二日制：第2・3・4・5土曜日休）<br>GW休暇、夏季休暇、年末年始休暇、特別休暇など（年間休日120日）<br>6ヶ月経過後の年次有給休暇日数：10日'
+            },
+            {
+                label: '福利厚生',
+                value: '雇用・労災・健康・厚生・財形<br>携帯電話・PC貸与、営業車1人1台貸与（通勤利用可・ガソリン代会社負担）、慶弔見舞金、資格取得支援制度、顧問弁護士による社員相談制度、新築・リフォームの従業員割引、インフルエンザ予防接種、永年勤続表彰、社内表彰制度（月間MVP・年間個人／部門表彰）'
+            }
+        ];
 
         // Inject Job Table
         const tableBody = document.getElementById('job-table-body');
