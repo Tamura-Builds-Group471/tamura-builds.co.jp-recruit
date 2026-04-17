@@ -17,3 +17,6 @@ wp-content/themes/*
 !wp-content/themes/tamura-recruit/
 
 .DS_Store
+
+# 大容量メディア（別途配信）
+wp-content/themes/tamura-recruit/assets/public/img/lp/lv-1.mp4
